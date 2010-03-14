@@ -51,42 +51,18 @@
     <Compile Include="Framework\Machines\MachineRegister.cs" />
     <Compile Include="Framework\Machines\MachineSpec.cs" />
     <Compile Include="Framework\Machines\MachineInstruction.cs" />
-    <Compile Include="Framework\Metadata\Method.cs" />
-    <Compile Include="Framework\Metadata\Type.cs" />
     <Compile Include="Framework\Utils\BitUtils.cs" />
     <Compile Include="Framework\Utils\MemorySize.cs" />
-    <Compile Include="Framework\Utils\VirtualFileSet.cs" />
-    <Compile Include="Framework\Utils\VirtualFile.cs" />
-    <Compile Include="Modules\Compilers\CliToX86Fast\BuildPart.cs" />
-    <Compile Include="Modules\Compilers\CliToX86Fast\Compiler.cs" />
-    <Compile Include="Modules\Compilers\CliToX86Fast\Emitter.cs" />
-    <Compile Include="Modules\Compilers\CliToX86Fast\MethodSignature.cs" />
     <Compile Include="Modules\Compilers\CSharpToCli\MonoCSharpCompiler.cs" />
     <Compile Include="Modules\Machines\Arm\ArmInstruction.cs" />
     <Compile Include="Modules\Machines\Arm\ArmOpCode.cs" />
     <Compile Include="Modules\Machines\Arm\ArmOpCodes.cs" />
     <Compile Include="Modules\Machines\Arm\ArmRegisters.cs" />
     <Compile Include="Modules\Machines\Arm\ArmSpecs.cs" />
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliCallSiteDescToken.cs" />
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliFieldToken.cs" />
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliMethodToken.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Modules\Machines\Cli\CliOpCodes.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliSimplifiedStreamVisitor.cs" />
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliToken.cs" />
     <Compile Include="Modules\Machines\Cli\CliSpecs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliStringToken.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliTypeToken.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Modules\Machines\Cli\Readers\Fast\CliStreamVisitor.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Modules\Machines\Dalvik\DalvikInstruction.cs" />
@@ -95,10 +71,7 @@
     <Compile Include="Modules\Machines\Dalvik\DalvikRegisters.cs" />
     <Compile Include="Modules\Machines\Dalvik\DalvikSpecs.cs" />
     <Compile Include="Modules\Machines\Jvm\JvmSpecs.cs" />
-    <Compile Include="Modules\Machines\X86\X86ConditionCode.cs" />
-    <Compile Include="Modules\Machines\X86\X86Instruction.cs" />
-    <Compile Include="Modules\Machines\X86\X86OpCode.cs" />
-    <Compile Include="Modules\Machines\X86\X86OpCodes.cs" />
+    <Compile Include="Modules\Machines\X86\Writers\Fast\X86ConditionCode.cs" />
     <Compile Include="Modules\Machines\X86\X86Register.cs" />
     <Compile Include="Modules\Machines\X86\X86Register16.cs" />
     <Compile Include="Modules\Machines\X86\X86Register32.cs" />
@@ -106,19 +79,11 @@
     <Compile Include="Modules\Machines\X86\X86Register8.cs" />
     <Compile Include="Modules\Machines\X86\X86Registers.cs" />
     <Compile Include="Modules\Machines\X86\X86Specs.cs" />
-    <Compile Include="Modules\Machines\X86\X86Writer.cs" />
-    <Compile Include="Modules\Packaging\Pe\PePackage.cs" />
+    <Compile Include="Modules\Machines\X86\Writers\Fast\X86Writer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dependencies\I18N.CJK.dll" />
-    <Content Include="Dependencies\I18N.dll" />
-    <Content Include="Dependencies\I18N.MidEast.dll" />
-    <Content Include="Dependencies\I18N.Other.dll" />
-    <Content Include="Dependencies\I18N.Rare.dll" />
-    <Content Include="Dependencies\I18N.West.dll" />
     <Content Include="Dependencies\Mono.Cecil.dll" />
-    <Content Include="Dependencies\Mono.Cecil.Mdb.dll" />
     <Content Include="Dependencies\Mono.CompilerServices.SymbolWriter.dll" />
     <Content Include="Dependencies\Mono.CSharp.dll" />
     <Content Include="Dependencies\System.Core.dll" />
@@ -131,6 +96,7 @@
     <Folder Include="Framework\Packaging\" />
     <Folder Include="Modules\Packaging\Efi\" />
     <Folder Include="Modules\Packaging\MachO\" />
+    <Folder Include="Modules\Packaging\Pe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,17 +11,13 @@
 // limitations under the License.
 // 
 #if !(PLATFORM_WINDOWS || PLATFORM_OS_X || PLATFORM_LINUX)
-#error One of the following flags is required: PLATFORM_WINDOWS, PLATFORM_OS_X, PLATFORM_LINUX
-#endif
-#if PLATFORM_OS_X || PLATFORM_LINUX
-#define PLATFORM_POSIX
+#error One of the following compilation flags is required: PLATFORM_WINDOWS, PLATFORM_OS_X, PLATFORM_LINUX
 #endif
 
-#if PLATFORM_WINDOWS
 using System;
+#if PLATFORM_WINDOWS
 using NativeUtilsImplementation = Jet.Runtime.Native.Platforms.Windows.WindowsNativeUtils;
-
-#else
+#elif PLATFORM_OS_X || PLATFORM_LINUX
 using NativeUtilsImplementation = Jet.Runtime.Native.Platforms.Posix.PosixNativeUtils;
 #endif
 

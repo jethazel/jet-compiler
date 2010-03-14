@@ -17,7 +17,7 @@ namespace Jet.Runtime.Native.Platforms.Posix
 {
     internal static unsafe class LibC
     {
-#if OS_X
+#if PLATFORM_OS_X
         private const string LibCPath = "libc.dylib";
 #else
         private const string LibCPath = "libc.so";

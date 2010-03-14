@@ -1,6 +1,7 @@
 ﻿Jet Runtime
 
-Jet Runtime is a garbage-collecting virtual machine (VM).
+Jet Runtime is a virtual machine (VM).
+It targets the Common Language Runtime (CLR) standard.
 Everything is written in C#, a modern programming language.
 Licensed under the Apache 2.0 License.
 
@@ -8,11 +9,21 @@ Objectives:
 	- Easy to understand, modify and extend.
 
 =============================================================================
-Compilation flags:
+Compilation:
 =============================================================================
-- WINDOWS_32 = For 32-bit Windows
-- WINDOWS_64 = For 64-bit Windows
-- OS_X = For 32-bit Windows
+1. Source code to .NET assembly
+Jet.Runtime.Native code needs one of the following flags:
+- PLATFORM_WINDOWS
+- PLATFORM_OS_X
+- PLATFORM_LINUX
+
+2. .NET assembly to native binary
+The runtime's .NET assembly is compiled to native binary using Jet Compiler's
+ahead-of-time compilation.
+
+Note:
+The runtime can be also run inside any CLR (Microsoft CLR, Mono CLR, etc.).
+Nice for debugging.
 
 =============================================================================
 Dependencies:
@@ -20,9 +31,8 @@ Dependencies:
 
 Jet.Compiler
 	License: Apache 2.0 License
-	Our compiler collection which is used by Jet Runtime
-	Just-In-Time Compiler (JIT).
+	Used by Jet Runtime's Just-In-Time Compiler (JIT).
 
 Mono Base Class Library (http://mono-project.com)
-	License: GNU Library GPL 2.0 (LGPL 2.0).
-	Used by CLI programs.
+	License: MIT X11
+	Provides a standard .NET class library.

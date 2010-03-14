@@ -1,11 +1,24 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jet.Compiler", "Jet.Compiler\Jet.Compiler.csproj", "{30DEB935-4EA3-40C9-B174-7E028E33B0A3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jet.Runtime", "Jet.Runtime\Jet.Runtime.csproj", "{66A7939A-1534-4A25-92B5-CC1CFFF1974A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jet.Compiler.Tests", "Jet.Compiler.Tests\Jet.Compiler.Tests.csproj", "{47E89984-C69C-4420-8DA2-0FED99B77FBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C7BB5050-AEF3-49F4-9323-5C074D59C249}"
+	ProjectSection(SolutionItems) = preProject
+		jet-compiler.vsmdi = jet-compiler.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jet.Runtime.Tests", "Jet.Runtime.Tests\Jet.Runtime.Tests.csproj", "{5F3EA129-DA4A-421E-A461-BB3BFDC8593D}"
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = jet-compiler.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -19,6 +32,14 @@ Global
 		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E89984-C69C-4420-8DA2-0FED99B77FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E89984-C69C-4420-8DA2-0FED99B77FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E89984-C69C-4420-8DA2-0FED99B77FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E89984-C69C-4420-8DA2-0FED99B77FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F3EA129-DA4A-421E-A461-BB3BFDC8593D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3EA129-DA4A-421E-A461-BB3BFDC8593D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3EA129-DA4A-421E-A461-BB3BFDC8593D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3EA129-DA4A-421E-A461-BB3BFDC8593D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
