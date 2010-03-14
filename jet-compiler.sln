@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jet.Compiler", "Jet.Compiler\Jet.Compiler.csproj", "{30DEB935-4EA3-40C9-B174-7E028E33B0A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jet.Runtime", "Jet.Runtime\Jet.Runtime.csproj", "{66A7939A-1534-4A25-92B5-CC1CFFF1974A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{30DEB935-4EA3-40C9-B174-7E028E33B0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30DEB935-4EA3-40C9-B174-7E028E33B0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30DEB935-4EA3-40C9-B174-7E028E33B0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A7939A-1534-4A25-92B5-CC1CFFF1974A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

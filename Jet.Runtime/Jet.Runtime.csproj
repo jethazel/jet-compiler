@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>edecd6ff-609c-489c-a7e2-8ad6ad697e26</ProjectGuid>
+    <ProjectGuid>{66A7939A-1534-4A25-92B5-CC1CFFF1974A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Jet.Runtime</RootNamespace>
@@ -18,9 +18,10 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;PLATFORM_WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -40,8 +41,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Native\ExceptionUtils.cs" />
+    <Compile Include="Native\MemoryProtection.cs" />
+    <Compile Include="Native\MemoryUtils.cs" />
+    <Compile Include="Native\NativeZeroTerminatedCharArray.cs" />
+    <Compile Include="Native\NativeUtils.cs" />
+    <Compile Include="Native\Platforms\Posix\LibC.cs" />
+    <Compile Include="Native\Platforms\Posix\PosixNativeUtils.cs" />
+    <Compile Include="Native\Platforms\Posix\MMan.cs" />
+    <Compile Include="Native\Platforms\Windows\Kernel32.cs" />
+    <Compile Include="Native\Platforms\Windows\WindowsNativeUtils.cs" />
+    <Compile Include="Objects\RuntimeDelegate.cs" />
+    <Compile Include="Objects\RuntimeObject.cs" />
+    <Compile Include="Objects\RuntimeArray.cs" />
+    <Compile Include="Launcher.cs" />
+    <Compile Include="Objects\RuntimeVirtualMethodTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Compatability\Mono\" />
+    <Folder Include="Dependencies\" />
+    <Folder Include="JIT\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
